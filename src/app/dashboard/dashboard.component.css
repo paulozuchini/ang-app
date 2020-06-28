@@ -27,12 +27,3 @@ tr.user-row:not(.user-expanded-row):active {
   overflow: hidden;
   display: flex;
 }
-
-.user-diagram {
-  min-width: 80px;
-  border: 2px solid black;
-  padding: 8px;
-  font-weight: lighter;
-  margin: 8px 0;
-  height: 104px;
-}
