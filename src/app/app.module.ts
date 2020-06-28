@@ -13,6 +13,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { UserSearchComponent } from './user-search/user-search.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   imports: [
@@ -21,7 +25,11 @@ import { MatTableModule } from '@angular/material/table';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatTableModule
+    MatTableModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatPaginatorModule,
+    MatInputModule
   ],
   declarations: [
     AppComponent,
