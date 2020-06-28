@@ -63,4 +63,18 @@ private log(message: string) {
       return of(result as T);
     };
   }
+
+  /* GET users whose name contains search term */
+  searchUsers(term: string): Observable<User[]> {
+    if (!term.trim()) {
+      // if not search term, return empty user array.
+      return of([]);
+    }
+    return this.http.get<User[]>(`${this.usersUrl}/?name=${term}`).pipe(
+      tap(x => x.length ?
+        this.log(`found user matching "${term}"`) :
+        this.log(`no users matching "${term}"`)),
+      catchError(this.handleError<User[]>('searchUsers', []))
+    );
+  }
 }
